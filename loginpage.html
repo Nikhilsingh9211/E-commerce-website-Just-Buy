@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ecommerce </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--To use icons-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Swper Css -->
+    <link rel="stylesheet" href="/slider/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="/Style_Css_Files/style.css">
+</head>
+<script>
+    function login() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email === "admin@admin.com" && password === "123456") {
+            alert("Login successful");
+        } else {
+            alert("Incorrect email or password");
+        }
+    }
+</script>
+
+<style>
+    .login-button {
+        width: 100%;
+        margin-left: 0;
+        background-color: #ff7f00;
+        border: transparent;
+        margin-bottom: 100px;
+    }
+
+    .login-button:hover {
+        width: 100%;
+        margin-left: 0;
+        background-color: #ff8000a5;
+        border: transparent;
+    }
+
+    .container h2 {
+        text-align: center;
+    }
+
+    button {
+        color: #ff7f00;
+    }
+
+    input[type="password"] {
+        border: 1px solid #ff7f00;
+    }
+</style>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="/Img/Only logo.png" class="logo" alt="" height="50px"></a>
+
+        <form class="search-box">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/index.html" class="only-for-phones">Home</a></li>
+                <li><a href="/All_Product_Page/allproductpage.html" class="only-for-phones">All Product</a></li>
+                <li>
+                    <div class="dropdown only-for-phones">
+                        <button class="dropbtn">Women</button>
+                        <div class="dropdown-content ">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown only-for-phones">
+                        <button class="dropbtn ">Men</button>
+                        <div class=" dropdown-content ">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="only-for-phones">Kids</a></li>
+                <li><a href="/contactus.html" class="only-for-phones">Contact</a></li>
+                <li><a href="/loginpage.html">Login</a></li>
+                <li><a href="/shopingcartpage.html" id="cart-icon"><i class="fa fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="header2">
+        <div>
+            <ul id="navbar">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/All_Product_Page/allproductpage.html">All Product</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Women</button>
+                        <div class="dropdown-content">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Men</button>
+                        <div class="dropdown-content">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="/contactus.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <div class="container">
+        <h2>Login Page</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+            </div>
+            <button type="button" class="btn btn-primary login-button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+
+
+    <div id="footer">
+
+    </div>
+
+</body>
+<script src="/Script_Js_Files/script.js"></script>
+
+<script>
+    // Load footer HTML files and insert them into divs
+    document.addEventListener('DOMContentLoaded', function () {
+        const footerContainer = document.getElementById('footer');
+
+        // Load footer HTML file
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => footerContainer.innerHTML = html);
+    });
+</script>
+
+
+</html>

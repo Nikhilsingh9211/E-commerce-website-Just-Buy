@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ecommerce </title>
+    <!--To use icons-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Swper Css -->
+    <link rel="stylesheet" href="/slider/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="/Style_Css_Files/style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="/Img/Only logo.png" class="logo" alt="" height="50px"></a>
+
+        <form class="search-box">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html" class="only-for-phones">Home</a></li>
+                <li><a href="allproductpage.html" class="only-for-phones">All Product</a></li>
+                <li>
+                    <div class="dropdown only-for-phones">
+                        <button class="dropbtn">Women</button>
+                        <div class="dropdown-content ">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown only-for-phones">
+                        <button class="dropbtn ">Men</button>
+                        <div class=" dropdown-content ">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/contactus.html" class="only-for-phones">Kids</a></li>
+                <li><a href="/contactus.html" class="only-for-phones">Contact</a></li>
+                <li><a href="/loginpage.html">Login</a></li>
+                <li><a href="/shopingcartpage.html" id="cart-icon"><i class="fa fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html" class=""><i class="fa fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent active"></i>
+        </div>
+    </section>
+
+    <section id="header2">
+        <div>
+            <ul id="navbar">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/All_Product_Page/allproductpage.html">All Product</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Women</button>
+                        <div class="dropdown-content">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Men</button>
+                        <div class="dropdown-content">
+                            <a href="#">All</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Skirts</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html">Kids</a></li>
+                <li><a href="/contactus.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <div class="cart-header">
+                <h4>Items in Cart</h4>
+                <!-- <div class="col-1">Image</div>
+                <div class="col-2">Product Name & Price</div>
+                <div class="col-3">Quantity</div> -->
+            </div>
+            <div class="cart-item">
+                <div class="col-1">
+                    <img src="Img/product/w1.png" alt="Product Image">
+                </div>
+                <div class="col-2">
+                    <div class="product-name">Product Name</div>
+                    <div class="product-price">$99</div>
+                    <button class="delete-btn"><i class="fa fa-trash"></i></button>
+                </div>
+                <div class="col-3">
+                    <div class="quantity">
+                        <button class="minus-btn"><i class="fa fa-minus"></i></button>
+                        <input type="text" value="1">
+                        <button class="plus-btn"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Can add more cart items here -->
+        </div>
+        <div class="cart-summary">
+            <div class="card">
+                <div class="card-header">Summary</div>
+                <div class="card-body">
+                    <div class="product-price-row">
+                        <span class="label">Product Price:</span>
+                        <span class="value">$99</span>
+                    </div>
+                    <div class="shipping-row">
+                        <span class="label">Shipping:</span>
+                        <span class="value">$10</span>
+                    </div>
+                    <hr>
+                    <div class="total-row">
+                        <span class="label">Total:</span>
+                        <span class="value">$109</span>
+                    </div>
+                    <div class="checkout-btn-row">
+                        <button class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+</body>
+<script src="/Script_Js_Files/script.js"></script>
+
+<script>
+    // Load footer HTML files and insert them into divs
+    document.addEventListener('DOMContentLoaded', function () {
+        const footerContainer = document.getElementById('footer');
+
+        // Load footer HTML file
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => footerContainer.innerHTML = html);
+    });
+</script>
+
+
+</html>
