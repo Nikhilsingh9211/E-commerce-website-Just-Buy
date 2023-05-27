@@ -483,8 +483,11 @@ p {
 .swiper-wrapper {
   padding: 10px 12px;
   position: relative;
+  width: 100%;
   z-index: 1;
   display: flex;
+  overflow: scroll;
+  overflow-y: none;
   transition-property: transform;
   transition-timing-function: var(
     --swiper-wrapper-transition-timing-function,
